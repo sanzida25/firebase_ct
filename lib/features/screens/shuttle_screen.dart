@@ -51,6 +51,7 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
       'Time': time,
       'Date': date,
     });
+    print("Booked succesfully");
   }
 
 // for textfield information
@@ -684,7 +685,8 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child:  Center(
-                    child: Text('BOOK',
+                    child:
+                    Text('BOOK',
                       style: GoogleFonts.poppins(
                         //textStyle: Theme.of(context).textTheme.headlineSmall,
                         color: Colors.white,
@@ -696,6 +698,7 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
                   ),
                 ),
               ),
+
             ),
           ],
 

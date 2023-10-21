@@ -51,6 +51,7 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
       'Time': time,
       'Date': date,
     });
+    print("Confirmed successfully");
   }
 
 // for textfield information
