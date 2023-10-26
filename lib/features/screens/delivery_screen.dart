@@ -94,9 +94,9 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
     "11pm",
   ];
   List<String> items10 = [
-    "22 October 2023",
-    "23 October 2023",
-    "24 October 2023",
+    "3 November 2023",
+    "4 November 2023",
+    "5 November 2023",
   ];
 
   bool displayfromitem6 = false;
@@ -159,11 +159,12 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
               // )  ,
               child: Column(
                 children: [
-                  Positioned(
-                    top: 50,
-                    left: 10,
-                    right: 10,
-                    child: Column(
+                  // Positioned(
+                  //   top: 50,
+                  //   left: 10,
+                  //   right: 10,
+                   // child:
+                    Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
@@ -225,7 +226,7 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
                         ),
                       ],
                     ),
-                  ),
+                 // ),
                 ],
               ),
             ),
