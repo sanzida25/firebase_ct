@@ -14,20 +14,13 @@ class DeliveryScreen extends StatefulWidget {
 }
 class _DeliveryScreenState extends State<DeliveryScreen> {
 //for registering data to firebase from textfield
-//   final _fromController = TextEditingController();
-//   final _toController = TextEditingController();
-//   final _seatController = TextEditingController();
-//   final _timeController = TextEditingController();
-//   final _dateController = TextEditingController();
 
   @override
   void dispose(){
     textFieldController6.dispose();
     textFieldController7.dispose();
-    //textFieldController8.dispose();
     textFieldController9.dispose();
     textFieldController10.dispose();
-    // _dateController.dispose();
     super.dispose();
   }
 
@@ -35,8 +28,6 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
     addDetails1(
       textFieldController6.text.trim(),
       textFieldController7.text.trim(),
-      //int.parse(textFieldController2.text.trim()),
-      //textFieldController8.text.trim() ,
       textFieldController9.text.trim(),
       textFieldController10.text.trim(),
     );
@@ -47,7 +38,6 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
     await FirebaseFirestore.instance.collection('DeliveryClient').add({
       'From': from,
       'To': to,
-      //'Seats': seats,
       'Time': time,
       'Date': date,
     });
@@ -57,31 +47,9 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
 // for textfield information
   final textFieldController6 = TextEditingController();
   final textFieldController7 = TextEditingController();
-  //final textFieldController8 = TextEditingController();
   final textFieldController9 = TextEditingController();
   final textFieldController10 = TextEditingController();
 
-  // List<String> items6 = [
-  //   "Dhanmondi",
-  //   "Gulshan",
-  //   "Uttara",
-  //   "Bashundhara",
-  //   "Wari"
-  // ];
-  // List<String> items7 = [
-  //   "Dhanmondi",
-  //   "Gulshan",
-  //   "Uttara",
-  //   "Bashundhara",
-  //   "Wari"
-  // ];
-  // List<String> items8 = [
-  //   "1",
-  //   "2",
-  //   "3",
-  //   "4",
-  //   "5"
-  // ];
   List<String> items9 = [
     "7am",
     "9am",
@@ -101,7 +69,6 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
 
   bool displayfromitem6 = false;
   bool displayfromitems7 = false;
-  //bool displayfromitems8 = false;
   bool displayfromitems9 = false;
   bool displayfromitems10 = false;
 
@@ -115,11 +82,7 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
       textFieldController7.text = item;
     });
   }
-  // void selectItem2(String item) {
-  //   setState(() {
-  //     textFieldController8.text = item;
-  //   });
-  // }
+
   void selectItem3(String item) {
     setState(() {
       textFieldController9.text = item;
@@ -141,37 +104,15 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
         child: Column(
           children: [
             Container(
-              // height: 180,
-              // width: MediaQuery.of(context).size.width,
-              // decoration: const BoxDecoration(
-              //   borderRadius: BorderRadius.only(
-              //     bottomLeft: Radius.circular(150),
-              //     bottomRight: Radius.circular(10),
-              //   ),
-              //   gradient: LinearGradient(
-              //     begin: Alignment.topLeft,
-              //     end: Alignment.bottomRight,
-              //     colors: [Color.fromARGB(255, 68, 66, 72),
-              //       Color.fromARGB(255, 48, 45, 56),
-              //       Color.fromARGB(255, 36, 30, 40),
-              //       Color.fromARGB(255, 12, 1, 1),],
-              //   ),
-              // )  ,
+
               child: Column(
                 children: [
-                  // Positioned(
-                  //   top: 50,
-                  //   left: 10,
-                  //   right: 10,
-                   // child:
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            //to go to back page
-                            //Navigator.pop(context);
                             IconButton(
                               onPressed:() {
                                 Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen(),

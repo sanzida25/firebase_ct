@@ -14,11 +14,6 @@ class ShuttleScreen extends StatefulWidget {
 }
 class _ShuttleScreenState extends State<ShuttleScreen> {
 //for registering data to firebase from textfield
-//   final _fromController = TextEditingController();
-//   final _toController = TextEditingController();
-//   final _seatController = TextEditingController();
-//   final _timeController = TextEditingController();
-//   final _dateController = TextEditingController();
 
   @override
   void dispose(){
@@ -27,7 +22,6 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
     textFieldController2.dispose();
     textFieldController3.dispose();
     textFieldController4.dispose();
-    // _dateController.dispose();
     super.dispose();
   }
 
@@ -35,7 +29,6 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
     addDetails(
       textFieldController.text.trim(),
       textFieldController1.text.trim(),
-      //int.parse(textFieldController2.text.trim()),
       textFieldController2.text.trim() ,
       textFieldController3.text.trim(),
       textFieldController4.text.trim(),
@@ -134,35 +127,12 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("NSU Shuttle"),
-      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
-              // height: 180,
-              // width: MediaQuery.of(context).size.width,
-              // decoration: const BoxDecoration(
-              //   borderRadius: BorderRadius.only(
-              //     bottomLeft: Radius.circular(150),
-              //     bottomRight: Radius.circular(10),
-              //   ),
-              //   gradient: LinearGradient(
-              //     begin: Alignment.topLeft,
-              //     end: Alignment.bottomRight,
-              //     colors: [Color.fromARGB(255, 68, 66, 72),
-              //       Color.fromARGB(255, 48, 45, 56),
-              //       Color.fromARGB(255, 36, 30, 40),
-              //       Color.fromARGB(255, 12, 1, 1),],
-              //   ),
-              // )  ,
               child: Column(
                 children: [
-                  // Positioned(
-                  //   top: 50,
-                  //   left: 10,
-                  //   right: 10,
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -219,7 +189,6 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
                               color: Colors.black,
                               fontSize: 25,
                               fontWeight: FontWeight.w700,
-                              //fontStyle: FontStyle.italic,
                             ),
                           ),
                         ),
@@ -250,7 +219,6 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
                         color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
-                        //fontStyle: FontStyle.italic,
                       ),
                     ),
                   ],
@@ -430,7 +398,6 @@ class _ShuttleScreenState extends State<ShuttleScreen> {
                         color: Colors.black,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
-                        //fontStyle: FontStyle.italic,
                       ),
                     ),
                   ],
